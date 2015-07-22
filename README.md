@@ -34,7 +34,9 @@
    
 3. 而实现,可以看文件boardrfidCtrl.cpp
 
+
 4. 既然有了API如何调用?
+
 首先, 注册编译生成的ocx, Regsvr32 xxx.ocx(反注册加/u)
 
 然后, 在IE中执行如下文本:
