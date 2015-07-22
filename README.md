@@ -50,4 +50,5 @@
 `<input type ="button" onclick ="alert(ActiveX.TakeOneRfid());" value ="RFID" />`
 
 5. "CLSID:41B20F36-8986-40D4-9D16-E3466B13F386"如何获取?
+
 搜索Class information for , 下面一行uuid(41B20F36-8986-40D4-9D16-E3466B13F386)即是.
