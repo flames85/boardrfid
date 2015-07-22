@@ -14,15 +14,23 @@
 1. 新建ActiveX方法是: 文件 | 新建 | Visual C++ | MFC | MFC ActiveX Control
    看不懂工程里一堆文件哪来的,可以新建一个试一试.
 
-2. 如何查看工程API: 法1: 视图 | 类视图 | boardrifdLib | _Dboardrfid 
-                      (顺便一提,需要添加API的方法是右键_Dboardrfid, Add | Add Method)
-                    法2: 文件boardrfid.idl
+2. 如何查看工程API: 
+   
+   法1: 视图 | 类视图 | boardrifdLib | _Dboardrfid 
+        (顺便一提,需要添加API的方法是右键_Dboardrfid, Add | Add Method)
+
+   法2: 文件boardrfid.idl
 
     [id(1)] LONG InitPort(LONG nCom);
+    
     [id(2)] LONG OpenListenThread(void);
+    
     [id(3)] BSTR TakeOneRfid(void);
+    
     [id(4)] LONG SetBufferSize(LONG nSize);
+    
     [id(5)] LONG Init(LONG nCom, LONG nBaudRate);
+    
    
 3. 而实现,可以看文件boardrfidCtrl.cpp
 
