@@ -41,13 +41,13 @@
 
 然后, 在IE中执行如下文本:
 
-1# <OBJECT id="ActiveX" CLASSID="CLSID:41B20F36-8986-40D4-9D16-E3466B13F386" ></OBJECT>
-2# <script type="text/javascript">
-3# ActiveX.Init(4, 57600);
-4# ActiveX.OpenListenThread();
-5# ActiveX.SetBufferSize(2);
-6# </script>
-7# <input type ="button" onclick ="alert(ActiveX.TakeOneRfid());" value ="RFID" />
+`<OBJECT id="ActiveX" CLASSID="CLSID:41B20F36-8986-40D4-9D16-E3466B13F386" ></OBJECT>
+<script type="text/javascript">
+ActiveX.Init(4, 57600);
+ActiveX.OpenListenThread();
+ActiveX.SetBufferSize(2);
+</script>
+<input type ="button" onclick ="alert(ActiveX.TakeOneRfid());" value ="RFID" />`
 
 5. "CLSID:41B20F36-8986-40D4-9D16-E3466B13F386"如何获取?
 搜索Class information for , 下面一行uuid(41B20F36-8986-40D4-9D16-E3466B13F386)即是.
