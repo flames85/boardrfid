@@ -1,0 +1,54 @@
+// boardrfid.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (boardrfid.tlb) that will become a resource in
+// boardrfid.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(256872EE-2BDC-43A9-A1AB-AD66E2E2417C), version(1.0),
+  control ]
+library boardrfidLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CboardrfidCtrl
+	[ 
+		uuid(2E04D3BE-200F-4CA8-9CF9-8A7E5AB7645A)	
+	]
+	dispinterface _Dboardrfid
+	{
+		properties:
+		methods:
+            [id(1)] LONG InitPort(LONG nCom);
+            [id(2)] LONG OpenListenThread(void);
+            [id(3)] BSTR TakeOneRfid(void);
+            [id(4)] LONG SetBufferSize(LONG nSize);
+            [id(5)] LONG Init(LONG nCom, LONG nBaudRate);
+    };
+
+	//  Event dispatch interface for CboardrfidCtrl
+
+	[ 
+		uuid(65647ACC-BC07-449E-9FBC-A299082EECDF)	
+	]
+	dispinterface _DboardrfidEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CboardrfidCtrl
+	[
+		uuid(41B20F36-8986-40D4-9D16-E3466B13F386)
+	]
+	coclass boardrfid
+	{
+		[default] dispinterface _Dboardrfid;
+		[default, source] dispinterface _DboardrfidEvents;
+	};
+
+};
