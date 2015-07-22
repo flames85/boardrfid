@@ -35,16 +35,15 @@
 3. 而实现,可以看文件boardrfidCtrl.cpp
 
 4. 既然有了API如何调用?
+首先, 注册编译生成的ocx, Regsvr32 xxx.ocx(反注册加/u)
 
-首先注册编译生成的ocx, Regsvr32 xxx.ocx(反注册加/u)
-然后在IE中执行如下文本:
+然后, 在IE中执行如下文本:
+
 <OBJECT id="ActiveX" CLASSID="CLSID:41B20F36-8986-40D4-9D16-E3466B13F386" ></OBJECT>
 <script type="text/javascript">
-
 ActiveX.Init(4, 57600);
 ActiveX.OpenListenThread();
 ActiveX.SetBufferSize(2);
-
 </script>
 <input type ="button" onclick ="alert(ActiveX.TakeOneRfid());" value ="RFID" />
 
